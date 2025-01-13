@@ -789,9 +789,9 @@ checksum = "46f9a16a848a7fb95dd47ce387ac1ee9a6df879ba784b815537fcd388a1a8288"
 
 [[package]]
 name = "cssengine"
-version = "0.1.0"
+version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9b9d15ba79184fd3c90cc22f65afbf094bd19f5403e1977e83f1434541e41775"
+checksum = "4ab3f7a4a73ea73d35def924eedb7b0d1c50687a72f0253c1d32c464f1643444"
 dependencies = [
  "csscolorparser",
  "smallvec",
