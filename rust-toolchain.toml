@@ -1,0 +1,4 @@
+[toolchain]
+channel = "stable-2024-10-17"
+profile = "minimal"
+components = ["rust-src"]

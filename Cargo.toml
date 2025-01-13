@@ -1,0 +1,26 @@
+[package]
+name = "egui_css"
+version = "0.1.0"
+edition = "2021"
+authors = ["Sergio Ribera <sergioribera@rustlang-es.org>"]
+description = "Use css to styling egui"
+keywords = ["css", "egui", "styling", "web", "gui"]
+categories = ["web-programming", "development-tools"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/SergioRibera/egui_css"
+homepage = "https://github.com/SergioRibera/egui_css"
+readme = "README.md"
+exclude = ["examples"]
+
+[features]
+default = []
+tailwind_colors = ["cssengine/tailwind_colors"]
+
+[dependencies]
+egui = "0.29"
+smallvec = "1.13"
+cssengine = "0.1"
+
+[dev-dependencies]
+eframe = "0.29"
+egui_extras = {version = "0.29", default-features = false, features = ["syntect"]}
