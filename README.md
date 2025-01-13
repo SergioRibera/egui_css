@@ -2,6 +2,10 @@
 
 **egui_css** is an extension for [egui](https://github.com/emilk/egui), a Rust-based immediate mode GUI library. This framework introduces a cascading style sheet (CSS) approach to styling, allowing developers to define styles declaratively for their egui applications.
 
+
+https://github.com/user-attachments/assets/9d210ed1-4f1d-4f97-acbe-25f5689ee14b
+
+
 ## Features
 
 - **Blazing Fast:** The css parser is blazing fast
