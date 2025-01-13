@@ -1,6 +1,6 @@
 [package]
 name = "egui_css"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Sergio Ribera <sergioribera@rustlang-es.org>"]
 description = "Use css to styling egui"
