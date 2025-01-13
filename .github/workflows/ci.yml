@@ -1,0 +1,54 @@
+name: CI
+on:
+  workflow_call:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - ".github/"
+      - "release.toml"
+      - "LICENSE*"
+      - "README.md"
+    tags-ignore:
+      - "**"
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  # Run cargo clippy -- -D warnings
+  clippy_check:
+    name: Clippy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v4
+      - uses: Swatinem/rust-cache@v2
+      - uses: dsherret/rust-toolchain-file@v1
+      - name: Run clippy
+        run: cargo clippy -- -D warnings
+
+  # Run cargo fmt --all -- --check
+  format:
+    name: Format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v4
+      - uses: dsherret/rust-toolchain-file@v1
+      - name: Run cargo fmt
+        run: cargo fmt --all -- --check
+
+  # Run cargo test
+  tests_check:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v4
+      - uses: Swatinem/rust-cache@v2
+      - uses: dsherret/rust-toolchain-file@v1
+      - name: Run test
+        run: cargo test
